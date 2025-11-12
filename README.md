@@ -275,7 +275,7 @@ TURN toimii välityspalvelimena, se vastaanottaa ja edelleen lähettää median 
 Projektissa TURN-palvelin toteutetaan coturnilla, joka on avoimen lähdekoodin, vakaa ja laajalti käytetty TURN/STUN-toteutus. Palvelin hostataan virtuaalipalvelimella (Rahti, Render, AWS), jotta voidaan hallita sen asetuksia, salaisuuksia ja käyttörajoituksia.
 Coturn asennetaan esimerkiksi Linux-palvelimelle ja konfiguroidaan käyttämään REST API -autentikaatiota (use-auth-secret), jolloin tunnistautuminen toimii HMAC-salausten avulla.
 
-Noden puolella on oma reitti /api/turn, joka generoi käyttäjälle hetkellisen käyttöavaimen.
+Noden puolella on oma reitti /turn, joka generoi käyttäjälle hetkellisen käyttöavaimen.
 Tämä perustuu HMAC (Hash-based Message Authentication Code) -laskentaan, jossa yhdistetään palvelimen salainen avain ja nykyinen aikaleima. Näin muodostetaan niin sanottu long-term credential, joka on voimassa esimerkiksi 15 minuuttia ja kelpaa vain yhteen istuntoon. Ratkaisu estää pysyvien salasanojen vuotamisen ja tekee hyökkäyksistä merkityksettömiä, koska jokainen tunnus vanhenee nopeasti.
 
 
