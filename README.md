@@ -199,6 +199,8 @@ https://developers.cloudflare.com/durable-objects/get-started/
 
 Kaksisuuntainen signalointikanava selaimen ja Cloudflare Workerin välillä. Ylläpitää yhteyden käyttäjien välillä, siirtää SDPT ja ICE kandidaatit
 
+Mietitään vaihdetaanko WebTransport API, joka tarjoaa modernin päivityksen WebSocketiin, käyttäen HTTP/3 käyttäjän ja palvelimen välillä. Perustuu Googlen QUIC protokollaan. (Dokumentaatio: https://developer.mozilla.org/en-US/docs/Web/API/WebTransport_API)
+
 **Hono**
 
 Cloudflare Workerin HTTP-reitityskehys. Kevyt ja nopea kirjasto, joka selkeyttää reittien
