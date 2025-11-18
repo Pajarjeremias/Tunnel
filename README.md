@@ -104,10 +104,10 @@ Valitsin Fastifyn Expressin sijaan koska, Fastify on väitetysti tämän hetken 
 Käytetään pyyntöjen ja viestien ajonaikaiseen validointii, jotta body, query ja path toimii kuten pitää. Ajatuksena että skeema ja tyypit syntyvät samasta lähteestä, jotta Client, Worker että Node eivät ole keskenään eri mieltä viestimuodosta, kirjoittamalla yhden szod-skeeman josta johdan TypeScript tyypit. Tietoturvallisista syistä Zod tarjoaa mahdollisuuden lisätä argumenteiksi Session Description Protocol: (SDP) min ja max arvot, joilla pystytään esimerkiksi estämään isolla SDPllä tehty hyökkäys. 
 (Dokumentaatio: https://zod.dev/)
 
-**Drizzle**
+**Kysely.dev**
 
 Object-relational mapping, joka käsittelee tietokannasta (postgre/SQLite(Jos tähän päädytään, mietitään kannattaako ORM käyttää.))tulevat pyynnöt. Tämän avulla luodaan abstraktiokerros ohjelman ja tietokannan väliin, jotta ei tarvitse kirjoittaa suoria SQL kyselyjä. Toiminta perustuu relaatiotietokantojen tietojen muuttamisen olio-ohjelmoinnin objekteiksi. Haittapuolena yleensä ORM kohdalla koetaan suorituskyvyn mahdollinen heikkeneminen.
-(Dokumentaatio: https://orm.drizzle.team/docs/overview)
+(Dokumentaatio: https://kysely.dev/)
 
 **Helmet**
 
@@ -153,13 +153,11 @@ Luodaan selainpohjainen käyttöliittymä huoneisiin liittymiseen, aulan moderoi
 
 #### Käytetyt teknologiat ja kirjastot
 
-![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+Svelte
 
-TypeScript natiivi viitekehys, joka on moderni, kevyt ja nopea
-
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
-Käytetään tyylitykseen (dokumentaatio: https://tailwindcss.com/docs/installation/using-vite)
+SvelteKit
+Viitekehtys nopeaan ja suorituskykyisiin ohjelmiin.
+(Dokumentaatio: https://svelte.dev/docs/kit/introduction)
 
 ![Zod](https://img.shields.io/badge/zod-%233068b7.svg?style=for-the-badge&logo=zod&logoColor=white)
 
@@ -486,7 +484,7 @@ Lisäksi Fastifyn kautta voidaan tarvittaessa julkaista Prometheus-metriikat, jo
 Projektin viimeisessä vaiheessa painopiste on viimeistelyssä ja skaalauksessa.
 Durable Objecteihin lisätään elinkaaren hallinta: jos huone on ollut passiivinen tietyn ajan, se suljetaan automaattisesti.
 README ja dokumentaatio viimeistellään niin, että sovelluksen saa pystytettyä ja testattua yhdellä komennolla.
-Tässä vaiheessa kokonaisuus on toimiva WebRTC sovellus ja osoitus siitä, miten Node, Fastify, Drizzle ja Cloudflare Workers muodostavat yhdessä modernin, skaalautuvan ja tietoturvallisen viestintä alustan.
+Tässä vaiheessa kokonaisuus on toimiva WebRTC sovellus ja osoitus siitä, miten Node, Fastify, Kysely.Dev ja Cloudflare Workers muodostavat yhdessä modernin, skaalautuvan ja tietoturvallisen viestintä alustan.
 
 ## Tietoperusta
 Tietoperustana käytetään jo annettuja dokumentaatio linkkejä, aiheeseen liittyviä kirjoituksia, tutoriaali videoita sekä hyödynnetään opinnäytetyön toimeksianto yrityksen yhteyshenkilön tarjoamaa apua sekä oppilaitoksesta mahdollisesti saatavaa tukea.
